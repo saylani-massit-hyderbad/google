@@ -1,18 +1,13 @@
 
 
 
-
-function gsignin(){
-    var provider = new firebase.auth.GoogleAuthProvider();
+function fblogin(){
+    var provider = new firebase.auth.FacebookAuthProvider();
     firebase.auth().signInWithPopup(provider)
-    .then((res)=>{
-        console.log(res.user)
+    .then((data)=>{
+        console.log(data)
     })
     .catch((err)=>{
         console.log(err)
     })
-
-    console.log(provider)
-
-
 }
